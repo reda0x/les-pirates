@@ -21,6 +21,23 @@
     align-items: center;
     width: 100%;
     color: white;
+    z-index: 100;
+    transition: ease-in-out .5s;
+}
+.header-scroll{
+    display: flex;
+    position: fixed;
+    top: 0;
+    background: rgba(255, 196, 0, 0.897);
+    padding: 1rem;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+    box-shadow:  5px 0 5px rgb(255, 196, 0);
+    transition: ease-in-out .5s;
 }
 .header-navs{
     display: flex;
@@ -82,6 +99,13 @@
     transition: all .5s;
 }
 .header:hover .web-logo{
+    transform: rotate(360deg);
+}
+.header-scroll:hover .title{
+    transform: translateX(0);
+    transition: all .5s;
+}
+.header-scroll:hover .web-logo{
     transform: rotate(360deg);
 }
 .list-container{
@@ -198,8 +222,62 @@
     text-decoration: underline;
     white-space: nowrap;
 }
+.offer-page{
+    min-height: 100vh;
+    background: rgb(0, 0, 0);
+    color: white;
+    padding-bottom: 100px;
+    z-index: 150;
+}
+.offer-title{
+    text-align: center;
+    padding: 3rem 0 1rem 0;
+    margin-bottom: 5rem;
+    border-bottom: 2px solid rgb(255, 196, 0);
+}
+.offer-title h1{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.formation-offer{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    row-gap: 20px;
+    column-gap: 30px;
+    justify-content: center;
+}
+.formation-image{
+    min-width: 430px;
+    width: 500px;
+    padding: 0 0 20px 0;
+}
+.formation-image img{
+    max-width: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.formation-content h1{
+    color: rgb(255, 196, 0);
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+    
+}
+.formation-content{
+    min-width: 370px;
+    width: 510px;
+}
+.formation-content p{
+    line-height: 2.5rem;
+    text-transform: lowercase;
+    font-size: 1.1rem;
+    margin: 0 10px 0 10px;
+}
 
 @media (max-width: 750px){
+    .formation-image img{
+        width: 300px;
+    }
     .title{
         font-size: 1.6rem;
     }
