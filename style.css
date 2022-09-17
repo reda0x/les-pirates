@@ -34,10 +34,12 @@
     top: 0;
     background: rgba(255, 196, 0, 0.897);
     padding: 1rem;
+    padding-right: 2rem;
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     padding-right: 2rem;
     color: rgb(255, 255, 255);
     z-index: 100;
