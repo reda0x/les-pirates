@@ -19,7 +19,15 @@ window.addEventListener('scroll', function(){
     }else{
         header.classList.replace('header-scroll', 'header')
     }
+})
 
-    lastScroll = scrolled
-    console.log(scrolled)
+const topbutt = document.getElementById('top')
+window.addEventListener('scroll', function(){
+    const scrolled2 = window.pageYOffset;
+    if (scrolled2 <= 170){
+        topbutt.classList.replace('back-to-top-button','back-to-top-button-active')
+    }else{
+        topbutt.classList.replace('back-to-top-button-active','back-to-top-button')
+    }
+
 })
