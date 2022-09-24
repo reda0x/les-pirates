@@ -82,7 +82,7 @@
     display: flex;
     align-items: center;
 }
-.header-button button{
+.header-button a{
     border:  2px solid #ffffff;
     padding: 10px 20px;
     background: transparent;
@@ -94,23 +94,14 @@
     position: relative;
     overflow: hidden;
     z-index: 2;
-    transition: 1s;
+    transition: .5s;
     white-space: nowrap;
     color: white;
 }
-.header-button button::before{
-    content: '';
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: -100%;
-    position: absolute;
-    background: rgb(255, 255, 255);
-    transition: all ease-in-out .1s;
-    z-index: -1;
-}
-.header-button button:hover::before{
-    left: 0;
+
+.header-button a:hover{
+    background: white;
+    color: gray;
 }
 .header-button button:hover{
     color: rgb(0, 0, 0);
@@ -185,6 +176,7 @@
     color: rgb(255, 255, 255);
     font-size: 1.8rem;
     display: none;
+    cursor: pointer;
 }
 
 .hero-content{
@@ -252,9 +244,13 @@
     width: 400px;
     min-width: 300px;
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
     border-radius: 10px;
     height: 100px;
+    line-height: 1.5rem;
 }
 
 .hero-card span a{
@@ -264,10 +260,12 @@
 }
 .offer-page{
     min-height: 100vh;
-    background: rgb(0, 0, 0);
+    background: linear-gradient(rgba(9, 7, 30, 0.815),rgba(9, 7, 30, 0.8)), url(images/form.jpg) no-repeat;
     color: white;
     max-width: 100vw;
-    padding-bottom: 70px;
+    padding-bottom: 2rem;
+    background-position: center;
+    background-size: cover;
     z-index: 150;
 }
 .offer-title{
@@ -288,15 +286,8 @@
     column-gap: 30px;
     justify-content: center;
 }
-.formation-image{
-    
-    padding: 0 0 20px 0;
-}
-.formation-image img{
-    max-width: 500px;
-    object-fit: cover;
-    border-radius: 20px;
-}
+
+
 .formation-content h1{
     color: rgb(255, 196, 0);
     font-size: 1.5rem;
@@ -306,7 +297,7 @@
 .formation-content{
     max-width: 510px;
     border: 2px solid rgb(255, 196, 0);
-    padding: .5rem;
+    padding: 2rem 1rem 2rem 1rem;
     padding-bottom: 1rem;
 }
 .formation-content p{
@@ -314,6 +305,10 @@
     text-transform: lowercase;
     font-size: 1.1rem;
     margin: 0 10px 0 10px;
+}
+.formation-button-subscription{
+    display: flex;
+    justify-content: center;padding-top: 2rem;
 }
 .suscription-button{
     background: rgb(243, 186, 0);
@@ -509,6 +504,15 @@
 .sc a{
     color: gray;
 }
+
+.scurity-licence{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    padding-bottom: 2rem;
+}
+
 @media (max-width: 750px){
     .web-logo{
         width: 3rem;
@@ -522,7 +526,7 @@
         font-size: 1.5rem;
     }
     .list-container{
-        position: fixed;
+        position: absolute;
         top: 0;
         right: -240px;
         width: 240px;
@@ -569,7 +573,7 @@
     }
 }
 @media (max-width: 518px){
-    .header-button button{
+    .header-button a{
         display: none;
     }
     .fa-solid{
