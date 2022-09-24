@@ -22,7 +22,6 @@
     height: 90vh;
     width: 750px;
     min-width: 350px;
-    display: flex;
 }
 
 .info-container{
@@ -41,9 +40,9 @@
 .questionner-content{
     background: white;
     height: 84vh;
+    width: 100%;
     overflow: hidden;
     overflow-y: scroll;
-    line-height: 5rem;
     padding: 1rem;
 }
 .location-container{
@@ -87,6 +86,148 @@ iframe{
     height: 300px;
     width: 500px;
 }
+
+.a label{
+    display: block;
+    color: gray;
+}
+.b label{
+    display: block;
+    color: gray;
+}
+.c label{
+    display: block;
+    color: gray;
+}
+.a input{
+    width: 300px;
+    height: 35px;
+    color: red;
+    outline: none;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid rgb(0, 174, 255);
+    transition: .5s;
+}
+.a input:focus{
+    border-bottom: 1px solid orangered;
+}
+.b input{
+    width: 300px;
+    height: 35px;
+    color: rgb(0, 174, 255);
+    outline: none;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid rgb(0, 174, 255);
+    transition: .5s;
+}
+.b input:focus{
+    border-bottom: 1px solid orangered;
+}
+.c input{
+    width: 300px;
+    height: 35px;
+    color: rgb(0, 174, 255);
+    outline: none;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid rgb(0, 174, 255);
+    transition: .5s;
+}
+.c input:focus{
+    border-bottom: 1px solid orangered;
+}
+.c select{
+    background: white;
+    border: 1px solid rgb(0, 174, 255);
+    padding: 5px 5px;
+    font-size: 1.2rem;
+    color: rgb(0, 174, 255);
+    transition: .5s;
+    width: 300px;
+}
+.c select:focus{
+    background: rgb(0, 174, 255);
+    padding: 5px 5px;
+    font-size: 1.2rem;
+    color: white;
+}
+.a, .b, .c{
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+
+
+}
+.d,.e {
+    padding: .8rem;
+}
+.d div{
+    padding-bottom: 1rem;
+}
+.e div{
+    padding-bottom: 1rem;
+}
+.da, .ea{
+    color: gray;
+    padding-bottom: 1rem;
+}
+.f{
+    padding: .8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+.f a{
+    color: red;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 5px 10px;
+    transition: .4s;
+    cursor: pointer;
+}
+.f a:hover{
+    background: red;
+    color: white;
+}
+.send-butt{
+    border: 1px solid rgb(0, 174, 255);
+    color: rgb(0, 174, 255);
+    padding: 5px 10px;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+.send-butt:hover{
+    color: white;
+    background: rgb(0, 174, 255);
+}
+.reset{
+    border: 1px solid rgb(255, 145, 0);
+    color: rgb(255, 145, 0);
+    padding: 5px 10px;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+.reset:hover{
+    color: white;
+    background: rgb(255, 145, 0);
+}
+
+
+
+
+
+
+
 @media (max-width: 580px){
     iframe{
         width: 350px;
